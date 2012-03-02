@@ -94,6 +94,11 @@ debs:
     - dpkg-dev
     - libxml2-dev
     - zlib1g-dev
+    # python-pip stuff
+    - python-pip
+    - python-virtualenv
+    - virtualenvwrapper
+
   pkgs:
     # apache stuff
     - apache2
