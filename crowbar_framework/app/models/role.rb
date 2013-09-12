@@ -68,6 +68,12 @@ class Role < ActiveRecord::Base
     res.uniq
   end
 
+  # Called whenever a jig needs to load a role.
+  # This needs to do whatever is needed to load the role required by the jig.
+  def jig_role(name)
+    raise "#{name} does not know how to load a role for a jig!"
+  end
+
   # State Transistion Overrides
   
   def on_error(node_role, *args)
